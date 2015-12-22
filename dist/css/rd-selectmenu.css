@@ -1,0 +1,66 @@
+/**
+ * RD Select Menu
+ * @Section
+ */
+.form-group {
+  text-align: left; }
+
+.form-select {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid;
+  padding: 3px 20px;
+  height: 40px; }
+
+.rd-select {
+  position: relative;
+  cursor: pointer; }
+
+.rd-select-value {
+  display: block; }
+
+.rd-select-value-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); }
+
+.rd-select-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  color: #333;
+  border: 2px solid #fff;
+  background: #fff;
+  padding: 4px 0 4px 4px;
+  max-height: 200px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  .rd-select-menu li + li {
+    margin-top: 4px; }
+  .rd-select-menu::-webkit-scrollbar {
+    width: 4px;
+    height: 0; }
+  .rd-select-menu::-webkit-scrollbar-thumb {
+    background: #cccccc; }
+
+.rd-select-option {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 5px 20px;
+  transition: .3s all; }
+  .rd-select-option:hover, .rd-select-option.selected {
+    background: #eee; }
+
+.rd-select-open .rd-select-menu {
+  display: block; }

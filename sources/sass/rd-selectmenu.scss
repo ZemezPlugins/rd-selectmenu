@@ -1,0 +1,92 @@
+/**
+ * RD Select Menu
+ * @Section
+ */
+
+$select-color: #333;
+$select-border: 2px solid;
+$select-background: #fff;
+$select-selected-background: #eee;
+$select-font-size: 18px;
+$select-line-height: 30px;
+
+.form-group{
+  text-align: left;
+}
+
+.form-select {
+  display: block;
+  font-size: $select-font-size;
+  line-height: $select-line-height;
+  border: $select-border;
+  padding: 3px 20px;
+  height: 40px;
+}
+
+.rd-select {
+  position: relative;
+  cursor: pointer;
+}
+
+.rd-select-value{
+  display: block;
+}
+
+.rd-select-value-icon{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.rd-select-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  color: $select-color;
+  border: $select-border $select-background;
+  background: $select-background;
+  padding: 4px 0 4px 4px;
+  max-height: 200px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  li + li {
+    margin-top: 4px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: darken($select-background, 20%);
+  }
+}
+
+.rd-select-option {
+  cursor: pointer;
+  font-size: $select-font-size;
+  line-height: $select-line-height;
+  padding: 5px 20px;
+  transition: .3s all;
+
+  &:hover, &.selected {
+    background: $select-selected-background;
+  }
+}
+
+.rd-select-open {
+  .rd-select-menu {
+    display: block;
+  }
+}
